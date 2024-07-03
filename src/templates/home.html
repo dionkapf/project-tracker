@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+  
+{% block content %}
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <div class="w3-padding-16 w3-center" style="display: flex; column-gap: 50px;"  id="projects">
+    {% for project in projects %} 
+    <div class="w3-quarter" style="display: flex;border: 2px solid black;border-radius: 5px;flex-direction: column;justify-content: space-between;">
+      <h3 style="order: 1;">{{project.name}}</h3>
+      <a style="order: 2;" href="{{ url_for('main.select_project' ,project_id=project.id) }}">Select</a>
+    </div>
+    {% endfor %}
+  </div>
+  
+  
+  <!-- End page content -->
+</div>
+{% endblock %}

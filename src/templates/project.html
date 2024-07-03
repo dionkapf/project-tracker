@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <div class="w3-padding-16 w3-center" style="display: flex; column-gap: 100px;justify-content: center" id="projects">
+        <div class="w3-quarter"
+            style="display: flex;border: 2px solid black;border-radius: 5px;flex-direction: column;justify-content: space-between;">
+            <h2 style="order: 1;">Project Details: {{ project.name }}</h2>
+            <p style="order: 2;">Duration: {{ project.duration }} days</p>
+            <p style="order: 3;">Client: {{ project.client }}</a>
+        </div>
+    </div>
+    
+    <a href="{{ url_for('main.home') }}">Back to projects</a>
+</div>
+{% endblock %}

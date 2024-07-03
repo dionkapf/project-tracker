@@ -1,6 +1,6 @@
 import sqlite3
 import csv
-from src.models import Project
+from models import Project
 
 path = "/home/dkapfumvuti/project-tracker/src/instance/projects.db"
 

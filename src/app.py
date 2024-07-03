@@ -1,8 +1,8 @@
 from flask import Flask
-from src.views import main
-from src.models import db
+from views import main
+from models import db
 from flask_sqlalchemy import SQLAlchemy
-from src.db_populate import get_data
+from db_populate import get_data
  
 app = Flask(__name__)
 
